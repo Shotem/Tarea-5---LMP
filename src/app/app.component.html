@@ -1,29 +1,5 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<button mat-button><a routerLink="/tabinicio">Inicio</a></button>
+<button mat-button><a routerLink="/tab1">Create Cookie</a></button>
+<button mat-button><a routerLink="/tab2">See Cookie</a></button>
 
-<div class="content" role="main">
-
-  <h1> Busque el personaje de Star Wars </h1>
-  <input type="text" [(ngModel)]="name" value="Luke">
-  <button (click)=callAPI()>Buscar</button>
-  <br>
-
-  <div *ngFor="let person of people" id="select_person">
-    <a href={{person.url}}>{{person.name}}</a>  <button (click)="select(person)">Selecionar</button>
-  </div>
-
-  <div *ngIf="getCookie() !== ''" id="reset_id">
-      <p>La cookie actual es "{{getCookie()}}"</p>
-      <button (click)="resetCookie()">Reset Cookie</button>
-  </div>
-
-</div>
-
-
-<!--router-outlet></router-outlet-->
+<router-outlet></router-outlet>
