@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VerifyCookieComponent } from '../verify-cookie/verify-cookie.component';
 
 @Component({
   selector: 'app-tab2',

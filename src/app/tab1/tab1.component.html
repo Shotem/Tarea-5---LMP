@@ -8,10 +8,7 @@
     <div *ngFor="let person of people" id="select_person">
       <a href={{person.url}}>{{person.name}}</a>  <button (click)="select(person)">Selecionar</button>
     </div>
-  
-    <div *ngIf="getCookie() !== ''" id="reset_id">
-        <p>La cookie actual es "{{getCookie()}}"</p>
-        <button (click)="resetCookie()">Reset Cookie</button>
-    </div>
+
+    <app-verify-cookie></app-verify-cookie>
   
   </div>

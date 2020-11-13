@@ -1,0 +1,7 @@
+<div *ngIf="getCookie() !== ''" id="reset_id">
+    <p>La cookie actual es "{{getCookie()}}"</p>
+    <button (click)="resetCookie()">Reset Cookie</button>
+</div>
+<div *ngIf="getCookie() === ''" id="reset_id">
+    <p>Parece que actualmente no hay una cookie guardada</p>
+</div>

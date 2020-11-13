@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Person } from 'src/classes/Person';
 import { CallAPIService } from 'src/services/call-api.service';
+import { VerifyCookieComponent } from '../verify-cookie/verify-cookie.component';
 
 @Component({
   selector: 'app-tab1',
@@ -38,17 +39,6 @@ export class Tab1Component implements OnInit {
     document.cookie = "name="+person.name+";SameSite=strict;expires="+ twoDaysFromToday;
     this.people = [];
     return true;
-  }
-
-  resetCookie() : boolean {
-    let today = new Date();
-    let yesterday = new Date( today.setDate(today.getDate() - 1 ));
-    document.cookie = "name=;SameSite=strict;expires="+ yesterday;
-    return true;
-  }
-
-  getCookie() :string {
-    return document.cookie;
   }
 
 }
