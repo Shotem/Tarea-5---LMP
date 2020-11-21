@@ -30,6 +30,7 @@ export class Tab1Component implements OnInit {
   select( person: Person) {
     if ( this.setCookie( person ) ) {
       console.log(document.cookie);
+      window.open("/tab2", "_blank");
     }
   }
 
